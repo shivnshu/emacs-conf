@@ -26,10 +26,7 @@
 (eval-when-compile
   (require 'use-package))
 
-;(load-file "$HOME/.emacs.d/evil.el")
-
-;; Set frame title
-(setq frame-title-format '(buffer-file-name "%f - Emacs" ("%b - Emacs")))
+(load-file "$HOME/.emacs.d/evil.el")
 
 ;; Desktop save mode
 (desktop-save-mode 1)
