@@ -5,12 +5,21 @@
 
 (require 'use-package)
 
+;; Load specific files
+(use-package mode-line :load-path "elisp/")
+
 ;; go to last change location
 (use-package goto-chg
   :ensure t
   :commands goto-last-change
   :bind (("C-." . goto-last-change)
          ("C-," . goto-last-change-reverse)))
+
+;; Undo tree
+(use-package undo-tree
+  :ensure t
+  :config
+  (global-undo-tree-mode))
 
 ;; Set evil-mode
 (use-package evil
@@ -20,8 +29,8 @@
 
 (use-package evil-leader
   :ensure t
-  )
-(global-evil-leader-mode)
+  :config
+  (global-evil-leader-mode))
 
 (provide 'evil)
 

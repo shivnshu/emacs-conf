@@ -2,4 +2,5 @@
 !init.el
 !evil.el
 !.gitignore
-!elisp
+!elisp/
+!elisp/*
