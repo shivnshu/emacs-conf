@@ -6,6 +6,7 @@
 (require 'use-package)
 
 ;; Load specific files
+(use-package appearance :load-path "elisp/")
 (use-package mode-line :load-path "elisp/")
 
 ;; go to last change location
@@ -33,5 +34,4 @@
   (global-evil-leader-mode))
 
 (provide 'evil)
-
 ;;; evil.el ends here
