@@ -43,11 +43,5 @@
     :config
     (global-evil-matchit-mode 1))
 
-;; Show matching tag
-(use-package paren
-  :ensure t
-  :config
-  (show-paren-mode 1))
-
 (provide 'evil)
 ;;; evil.el ends here

@@ -54,5 +54,25 @@
   :config
   (winner-mode 1))
 
+;; Show matching tag
+(use-package paren
+  :ensure t
+  :config
+  (show-paren-mode 1))
+
+;; Tramp -- remote emacs
+(use-package tramp
+  :ensure t
+  :defer t
+  :config
+  (setq tramp-default-method "ssh")
+  (setq tramp-auto-save-directory "~/.emacs.d/tramp-autosave-dir")
+(setq password-cache-expiry 3600))
+
+;; Docker-tramp -- edit files into docker containers
+(use-package docker-tramp
+  :ensure t
+  )
+
 (provide 'misc-pkg)
 ;;; misc-pkg.el ends here
