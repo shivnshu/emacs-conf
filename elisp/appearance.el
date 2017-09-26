@@ -20,6 +20,10 @@
   :config
   (change-cursor-mode 1))
 
+;; Awesome font with appropriate size
+(setq default-frame-alist '((font . "Literation Mono Powerline-14")
+			    (alpha 95 95)))
+
 ;; tools, scroll etc.
 (tool-bar-mode -1)
 (scroll-bar-mode -1)

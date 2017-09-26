@@ -8,6 +8,10 @@
 ;; Load specific files
 (use-package appearance :load-path "elisp/")
 (use-package mode-line :load-path "elisp/")
+(use-package wspaces :load-path "elisp/")
+(use-package misc-pkg :load-path "elisp/")
+
+(use-package cc-init :load-path "elisp/")
 
 ;; go to last change location
 (use-package goto-chg
