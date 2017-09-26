@@ -46,7 +46,13 @@
     (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
     (transient-mark-mode 1) ;; No region when it is not highlighted
     (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
-)
+    )
+
+;; Use C-c right or left to get back previous buffer states
+(use-package winner
+  :ensure t
+  :config
+  (winner-mode 1))
 
 (provide 'misc-pkg)
 ;;; misc-pkg.el ends here
