@@ -6,10 +6,10 @@
 (require 'use-package)
 
 ;; Theme
-(use-package zenburn-theme
+(use-package jbeans-theme
   :ensure t
   :config
-  (load-theme 'zenburn t))
+  (load-theme 'jbeans t))
 
 ;; Highlight the current line
 (global-hl-line-mode)
