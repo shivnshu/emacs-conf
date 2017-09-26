@@ -74,5 +74,26 @@
   :ensure t
   )
 
+;; CMake minor mode
+(use-package cmake-mode
+  :ensure t
+  :config
+  (cmake-mode) 
+  (setq auto-mode-alist
+	  (append
+	   '(("CMakeLists\\.txt\\'" . cmake-mode))
+	   '(("\\.cmake\\'" . cmake-mode))
+	   auto-mode-alist))
+)
+
+;; Magit -- git from emacs
+(use-package magit
+  :ensure t
+  :bind (("C-c C-g" . magit-status)))
+;; Magit helper -- Highlight uncommited changes
+(use-package diff-hl
+  :ensure t
+  )
+
 (provide 'misc-pkg)
 ;;; misc-pkg.el ends here
