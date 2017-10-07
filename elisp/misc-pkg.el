@@ -42,6 +42,7 @@
 (use-package cua-base
   :ensure t
   :config
+  (setq cua-enable-cua-keys nil)
   (cua-mode t)
     (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
     (transient-mark-mode 1) ;; No region when it is not highlighted
@@ -78,9 +79,9 @@
 (use-package cmake-mode
   :ensure t
   :config
-  (cmake-mode) 
+  (cmake-mode)
   (setq auto-mode-alist
-	  (append
+   (append
 	   '(("CMakeLists\\.txt\\'" . cmake-mode))
 	   '(("\\.cmake\\'" . cmake-mode))
 	   auto-mode-alist))
@@ -94,6 +95,13 @@
 (use-package diff-hl
   :ensure t
   )
+
+;; Smooth scrolling
+(use-package centered-cursor-mode
+  :ensure t
+  :config
+  (global-centered-cursor-mode)
+	) ;; keyboard scroll one line at a time
 
 (provide 'misc-pkg)
 ;;; misc-pkg.el ends here

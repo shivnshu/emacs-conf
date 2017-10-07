@@ -32,6 +32,11 @@
   :config
   (evil-mode t))
 
+(use-package evil-nerd-commenter
+    :ensure t
+    :config
+(global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines))
+
 (use-package evil-leader
   :ensure t
   :config
@@ -42,6 +47,8 @@
     :ensure t
     :config
     (global-evil-matchit-mode 1))
+
+(use-package keybindings :load-path "elisp/")
 
 (provide 'evil)
 ;;; evil.el ends here
