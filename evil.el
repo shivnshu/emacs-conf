@@ -13,6 +13,9 @@
 
 (use-package cc-init :load-path "elisp/")
 
+; roslaunch highlighting
+(add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
+
 ;; go to last change location
 (use-package goto-chg
   :ensure t

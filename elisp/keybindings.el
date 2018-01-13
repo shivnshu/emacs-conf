@@ -3,6 +3,9 @@
 
 ;;; Code:
 
+;; List all buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (define-key evil-insert-state-map (kbd "C-c") 'cua-copy-region)
 (define-key evil-insert-state-map (kbd "C-v") 'cua-paste)
 (define-key evil-insert-state-map (kbd "C-x") 'cua-cut-region)

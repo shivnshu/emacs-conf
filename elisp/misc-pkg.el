@@ -96,12 +96,15 @@
   :ensure t
   )
 
-;; Smooth scrolling
-(use-package centered-cursor-mode
+;; Vim surround
+(use-package evil-surround
+  :ensure t)
+
+;; Zsh like completion in Find File
+(use-package zlc
   :ensure t
   :config
-  (global-centered-cursor-mode)
-	) ;; keyboard scroll one line at a time
+  (zlc-mode t))
 
 (provide 'misc-pkg)
 ;;; misc-pkg.el ends here
