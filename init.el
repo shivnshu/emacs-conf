@@ -11,8 +11,7 @@
                     ("org" . "http://orgmode.org/elpa/")
                     ("melpa" . "http://melpa.org/packages/")
                     ("melpa-stable" . "http://stable.melpa.org/packages/")
-                    ("marmalade" . "http://marmalade-repo.org/packages/")
-                    ("elpy" . "https://jorgenschaefer.github.io/packages/")))
+                    ("marmalade" . "http://marmalade-repo.org/packages/")))
 
 (package-initialize)
 
@@ -46,7 +45,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company-c-headers use-package))))
+ '(package-selected-packages (quote (elpy company-c-headers use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,5 +53,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda-mode locate")))
+;; (load-file (let ((coding-system-for-read 'utf-8))
+;;                (shell-command-to-string "agda-mode locate")))

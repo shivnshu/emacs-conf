@@ -7,11 +7,9 @@
 
 ;; Load specific files
 (use-package appearance :load-path "elisp/")
+(use-package misc-pkg :load-path "elisp/")
 (use-package mode-line :load-path "elisp/")
 (use-package wspaces :load-path "elisp/")
-(use-package misc-pkg :load-path "elisp/")
-
-(use-package cc-init :load-path "elisp/")
 
 ; roslaunch highlighting
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
@@ -92,7 +90,12 @@
 
 )
 
+;; Load only after defining evil-insert-state-map
 (use-package keybindings :load-path "elisp/")
+
+;; Language specific packages
+(use-package cc-init :load-path "elisp/")
+(use-package py-init :load-path "elisp/")
 
 (provide 'evil)
 ;;; evil.el ends here

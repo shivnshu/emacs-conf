@@ -4,3 +4,4 @@
 !.gitignore
 !elisp/
 !elisp/*
+!README.md
